@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4becc210042549a29222f959ea31b418" Name="Diagram1">
+        <EntityTypeShape EntityType="AdventureWorks2012Model.Address" Width="1.5" PointX="0.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2012Model.SalesOrderDetail" Width="1.5" PointX="10.125" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2012Model.SalesOrderHeader" Width="1.5" PointX="7.375" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="AdventureWorks2012Model.FK_SalesOrderHeader_Address_BillToAddressID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdventureWorks2012Model.FK_SalesOrderHeader_Address_ShipToAddressID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdventureWorks2012Model.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AdventureWorks2012Model.CountryRegion" Width="1.5" PointX="3.625" PointY="5.25" />
+        <EntityTypeShape EntityType="AdventureWorks2012Model.StateProvince" Width="1.5" PointX="5.125" PointY="0.625" />
+        <AssociationConnector Association="AdventureWorks2012Model.FK_Address_StateProvince_StateProvinceID" />
+        <AssociationConnector Association="AdventureWorks2012Model.FK_StateProvince_CountryRegion_CountryRegionCode" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

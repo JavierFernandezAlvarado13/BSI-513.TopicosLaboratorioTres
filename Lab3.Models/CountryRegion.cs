@@ -14,31 +14,22 @@ namespace Lab3.Models
      
 using System.Runtime.Serialization;
     [DataContract]
-public partial class SalesOrderDetail
+public partial class CountryRegion
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CountryRegion()
+        {
+            this.StateProvinces = new HashSet<StateProvince>();
+        }
+    
         	[DataMember]
-public int SalesOrderID { get; set; }
+public string CountryRegionCode { get; set; }
         	[DataMember]
-public int SalesOrderDetailID { get; set; }
-        	[DataMember]
-public string CarrierTrackingNumber { get; set; }
-        	[DataMember]
-public short OrderQty { get; set; }
-        	[DataMember]
-public int ProductID { get; set; }
-        	[DataMember]
-public int SpecialOfferID { get; set; }
-        	[DataMember]
-public decimal UnitPrice { get; set; }
-        	[DataMember]
-public decimal UnitPriceDiscount { get; set; }
-        	[DataMember]
-public decimal LineTotal { get; set; }
-        	[DataMember]
-public System.Guid rowguid { get; set; }
+public string Name { get; set; }
         	[DataMember]
 public System.DateTime ModifiedDate { get; set; }
     
-        public virtual SalesOrderHeader SalesOrderHeader { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<StateProvince> StateProvinces { get; set; }
     }
 }

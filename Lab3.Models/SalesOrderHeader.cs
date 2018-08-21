@@ -11,8 +11,10 @@ namespace Lab3.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class SalesOrderHeader
+     
+using System.Runtime.Serialization;
+    [DataContract]
+public partial class SalesOrderHeader
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SalesOrderHeader()
@@ -20,32 +22,58 @@ namespace Lab3.Models
             this.SalesOrderDetails = new HashSet<SalesOrderDetail>();
         }
     
-        public int SalesOrderID { get; set; }
-        public byte RevisionNumber { get; set; }
-        public System.DateTime OrderDate { get; set; }
-        public System.DateTime DueDate { get; set; }
-        public Nullable<System.DateTime> ShipDate { get; set; }
-        public byte Status { get; set; }
-        public bool OnlineOrderFlag { get; set; }
-        public string SalesOrderNumber { get; set; }
-        public string PurchaseOrderNumber { get; set; }
-        public string AccountNumber { get; set; }
-        public int CustomerID { get; set; }
-        public Nullable<int> SalesPersonID { get; set; }
-        public Nullable<int> TerritoryID { get; set; }
-        public int BillToAddressID { get; set; }
-        public int ShipToAddressID { get; set; }
-        public int ShipMethodID { get; set; }
-        public Nullable<int> CreditCardID { get; set; }
-        public string CreditCardApprovalCode { get; set; }
-        public Nullable<int> CurrencyRateID { get; set; }
-        public decimal SubTotal { get; set; }
-        public decimal TaxAmt { get; set; }
-        public decimal Freight { get; set; }
-        public decimal TotalDue { get; set; }
-        public string Comment { get; set; }
-        public System.Guid rowguid { get; set; }
-        public System.DateTime ModifiedDate { get; set; }
+        	[DataMember]
+public int SalesOrderID { get; set; }
+        	[DataMember]
+public byte RevisionNumber { get; set; }
+        	[DataMember]
+public System.DateTime OrderDate { get; set; }
+        	[DataMember]
+public System.DateTime DueDate { get; set; }
+        	[DataMember]
+public Nullable<System.DateTime> ShipDate { get; set; }
+        	[DataMember]
+public byte Status { get; set; }
+        	[DataMember]
+public bool OnlineOrderFlag { get; set; }
+        	[DataMember]
+public string SalesOrderNumber { get; set; }
+        	[DataMember]
+public string PurchaseOrderNumber { get; set; }
+        	[DataMember]
+public string AccountNumber { get; set; }
+        	[DataMember]
+public int CustomerID { get; set; }
+        	[DataMember]
+public Nullable<int> SalesPersonID { get; set; }
+        	[DataMember]
+public Nullable<int> TerritoryID { get; set; }
+        	[DataMember]
+public int BillToAddressID { get; set; }
+        	[DataMember]
+public int ShipToAddressID { get; set; }
+        	[DataMember]
+public int ShipMethodID { get; set; }
+        	[DataMember]
+public Nullable<int> CreditCardID { get; set; }
+        	[DataMember]
+public string CreditCardApprovalCode { get; set; }
+        	[DataMember]
+public Nullable<int> CurrencyRateID { get; set; }
+        	[DataMember]
+public decimal SubTotal { get; set; }
+        	[DataMember]
+public decimal TaxAmt { get; set; }
+        	[DataMember]
+public decimal Freight { get; set; }
+        	[DataMember]
+public decimal TotalDue { get; set; }
+        	[DataMember]
+public string Comment { get; set; }
+        	[DataMember]
+public System.Guid rowguid { get; set; }
+        	[DataMember]
+public System.DateTime ModifiedDate { get; set; }
     
         public virtual Address Address { get; set; }
         public virtual Address Address1 { get; set; }

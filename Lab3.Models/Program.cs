@@ -10,9 +10,8 @@ namespace Lab3.Models
     {
         static void Main(string[] args)
         {
-            SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
 
-            var contex = new AdventureWorks2012Entities();
+            var contex = new AdventureWorks2012();
             Address NewAddress = new Address()
             {
                 AddressLine1 = "",

@@ -14,38 +14,33 @@ namespace Lab3.Models
      
 using System.Runtime.Serialization;
     [DataContract]
-public partial class Address
+public partial class StateProvince
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Address()
+        public StateProvince()
         {
-            this.SalesOrderHeaders = new HashSet<SalesOrderHeader>();
-            this.SalesOrderHeaders1 = new HashSet<SalesOrderHeader>();
+            this.Addresses = new HashSet<Address>();
         }
     
         	[DataMember]
-public int AddressID { get; set; }
-        	[DataMember]
-public string AddressLine1 { get; set; }
-        	[DataMember]
-public string AddressLine2 { get; set; }
-        	[DataMember]
-public string City { get; set; }
-        	[DataMember]
 public int StateProvinceID { get; set; }
         	[DataMember]
-public string PostalCode { get; set; }
+public string StateProvinceCode { get; set; }
         	[DataMember]
-public System.Data.Entity.Spatial.DbGeography SpatialLocation { get; set; }
+public string CountryRegionCode { get; set; }
+        	[DataMember]
+public bool IsOnlyStateProvinceFlag { get; set; }
+        	[DataMember]
+public string Name { get; set; }
+        	[DataMember]
+public int TerritoryID { get; set; }
         	[DataMember]
 public System.Guid rowguid { get; set; }
         	[DataMember]
 public System.DateTime ModifiedDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeaders { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeaders1 { get; set; }
-        public virtual StateProvince StateProvince { get; set; }
+        public virtual ICollection<Address> Addresses { get; set; }
+        public virtual CountryRegion CountryRegion { get; set; }
     }
 }
